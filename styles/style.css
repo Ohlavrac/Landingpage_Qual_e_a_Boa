@@ -1,0 +1,277 @@
+/*First Mobile*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*Variaveis*/
+:root {
+  --backgroundColor: rgb(#f2f2f2);
+  --titleColor: #171826;
+  --subTitleColor: rgb(44, 44, 44);
+  --primary: #171826;
+  --secondary: #ffb950;
+}
+
+.title {
+  font: 700 2.4rem 'Fira Sans', sans-serif;
+  color: var(--titleColor);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--subTitleColor);
+  background: var(--backgroundColor);
+}
+
+/*Home*/
+#home {
+  overflow: hidden;
+}
+
+#home .container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+  margin-top: 2rem;
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+#home {
+  overflow: hidden;
+  margin-top: 6rem;
+}
+
+#home .home-image-container img {
+  position: relative;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+}
+
+nav {
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background: hsl(var(--corPadrao) 65% 88%);
+  z-index: 10;
+  top: 0;
+}
+
+nav.container {
+  margin-left: 0;
+  background: var(--secondary);
+}
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+}
+
+nav .menu ul {
+  display: none;
+}
+
+nav.show .menu ul {
+  display: grid;
+}
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  background-color: hsl(0 0% 98%);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-content: center;
+}
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a.title:hover {
+  color: hsl(var(--corPadrao), 36%, 57%);
+}
+
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+nav .menu_icon {
+  width: 35px;
+}
+
+nav .close {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  top: -1.5rem;
+  right: 1.5rem;
+  transition: 1s;
+}
+
+nav .open {
+  right: 1.5rem;
+}
+
+nav.show .close {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+  z-index: 10;
+}
+
+.chave {
+  position: absolute;
+  cursor: pointer;
+}
+
+.logo {
+  font: 700 1.8rem 'Fira Sans', sans-serif;
+  color: var(--primary);
+  margin-left: 1rem;
+}
+
+.logo span {
+  color: hsl(var(--corPadrao), 36%, 57%);
+}
+
+.bloco {
+  text-align: justify;
+}
+
+.bloco_sobre_nos {
+  text-align: justify;
+}
+
+.card_membro {
+  margin: 15px;
+}
+
+#equipe blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px;
+  border-radius: 5px;
+}
+
+#equipe p {
+  margin-bottom: 10px;
+}
+
+#equipe cite img {
+  margin-bottom: -10px;
+  margin-right: 5px;
+}
+
+#equipe cite img {
+  width: 2rem;
+  height: 2rem;
+  clip-path: circle();
+}
+
+#equipe .logo_github {
+  margin-top: 10px;
+  width: 32px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font-size: 1.25rem;
+  }
+
+  nav .open {
+    display: none;
+  }
+
+  .bloco {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+  }
+
+  #sobre .container {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  #sobre .image {
+    width: 500px;
+  }
+
+  #equipe .cards_membros {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  .card_membro {
+    margin: 10px;
+  }
+}
